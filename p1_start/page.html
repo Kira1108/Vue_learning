@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="../js/vue.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div id='root'>
+        <!-- 标签语法, 把东西搞到标签体里面去 -->
+        <h1>Hi there {{name.toUpperCase()}} {{Date.now()}}</h1><hr/>
+
+
+        <!-- 指令语法， 把东西搞到属性里面去 -->
+        <a :href="url">Go to baidu</a><br/>
+        <a v-bind:href="url">Go to baidu</a><br/>
+        <a :href="school.url.toUpperCase()">My schools is {{school.name}}, {{school.address}}</span>
+    </div>
+
+    <!-- 一个环境里面只有一个Vue实例, 搞出来分层的传数据到data里面,用el选择element -->
+    <script type="text/javascript">
+        Vue.config.productionTip = false;
+
+        let app = new Vue({
+            el: "#root",
+            data:{
+                name:"Wanghuan",
+                url:"http://www.baidu.com",
+                school:{
+                    url:"http://www.google.com",
+                    name:"Wujiaquyizhong",
+                    address:"Wujiaqu, Xinjiang, China"
+                }
+            }
+        })
+    </script>
+</body>
+</html>
