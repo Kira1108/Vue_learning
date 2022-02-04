@@ -29,14 +29,34 @@
     <script type="text/javascript">
         Vue.config.productionTip = false
 
+        // first way of binding  element
+        // var app = new Vue({
+        //     el: "#root",
+        //     data:{
+        //         name:"Hello there.",
+        //         x:'12345'
+        //     }
+
+        // })
+
+
+        // second way of binding elmenet
         var app = new Vue({
             el: "#root",
-            data:{
-                name:"Hello there.",
-                x:'12345'
+            // data is callable that returns an object.
+            // vue is responsible of calling this function.
+            // data(){return {...}} is 是更加通用的写法,在对象里面写函数
+            data: function(){
+                return {
+                    name:"Hello there.",
+                    x:'12345'
+                }
             }
-
         })
+
+        // amout vue instance to an element
+        app.$mount("#root")
+
     </script>
 </body>
 </html>
