@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="../js/vue.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="root">
+        <!-- 只有改变Vue对象里面的数据，页面才能跟着发生改变 -->
+        单向数据绑定: <input type="text" v-bind:value=name><br>
+
+        <!-- 页面上的数据如果发生了变化，能狗影响Vue对象的值 -->
+        双向数据绑定: <input type="text" v-model:value=name><br>
+
+        <!-- 修改双向绑定的dom, 影响Vue对象, 用单向绑定Vue对象的所有页面元素 -->
+
+        <!-- 单向绑定的东西只写一个:
+        双向绑定的东西是针对value属性的, 只写v-model, 只应用在表单元素上面 -->
+        单向数据绑定简化: <input type="text" :value=x><br>
+        双向数据绑定简化: <input type="text" v-model=x><br>
+
+
+
+    </div>
+
+    <script type="text/javascript">
+        Vue.config.productionTip = false
+
+        var app = new Vue({
+            el: "#root",
+            data:{
+                name:"Hello there.",
+                x:'12345'
+            }
+
+        })
+    </script>
+</body>
+</html>
