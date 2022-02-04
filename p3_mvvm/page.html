@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="../js/vue.js"></script>
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="root">
+        <!-- 请你直接从vm里面拿东西 -->
+
+        <!-- 获取data里面的东西 -->
+        <h1>学校名称: {{name}}</h1>
+        <h1>学校地址: {{address}}</h1>
+
+        <!-- 一个js表达式 -->
+        <h1>学校名称: {{1 + 1}}</h1>
+
+        <!-- 获取vm的其他的方法和属性 也可以获取远行的各种属性 -->
+        <h1>学校名称: {{$options}}</h1>
+        <h1>学校名称: {{$emit}}</h1>
+        <h1>学校名称: {{_c}}</h1>
+    </div>
+
+    <script type="text/javascript">
+        Vue.config.productionTip = false
+
+        const vm = new Vue({
+            el: "#root",
+            data:{
+                name:"wanghuan",
+                address:"wujiaqu, xinjinag, china"
+            }
+
+        })
+    </script>
+</body>
+</html>
