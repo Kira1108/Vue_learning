@@ -1,0 +1,28 @@
+a {
+    /* color of the content text */
+    color:red;
+
+    /* something decoration around text */
+    text-decoration-color:aqua;
+
+    /* current color is inherited from color */
+    border: 1px solid currentColor;
+
+    /* under the content text */
+    background-color: burlywood;
+
+}
+
+p{
+    /* block-element affects the whole line */
+    background-color:lightblue;
+}
+
+em {
+    /* inline element affect only the content it needs */
+    background-color:lightcoral
+}
+
+span {
+    background-color: rgba(100,100,130,30%);
+}
