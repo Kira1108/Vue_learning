@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BEM Exmaple</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- wraps everying visible content -->
+    <form class="form" method="POST">
+
+        <!-- p is element -->
+        <p class="form__group">
+            <label class="form__label" for="name">Name:</label>
+            <input type="text" class="input" name="name" id="name"/>
+        </p>
+        <p class="form__group">
+            <label class="form__label" for="email">Email:</label>
+            <input type="text" class="input" name="email" id="email"/>
+        </p>
+        <p class="form__group">
+            <label class="form__label" for="password">Password:</label>
+            <input type="text" class="input" name="password" id="password"/>
+        </p>
+
+        <button class="buttom" type="submit">Sign Up</button>
+    </form>
+    
+</body>
+</html>
