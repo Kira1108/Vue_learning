@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MicroBlog</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="navbar">
+       <img class="navbar__brand" src="logo.svg" alt="" width="100px" hegith="100px"/>
+       MicroBlog 
+    </header>
+    <ul class="navbar__navigation">
+        <li class="navbar__navigation-item">
+            <a class="navbar__link" href="#">Recent</a>
+        </li>
+
+        <li class="navbar__navigation-item">
+            <a class="navbar__link" href="#">Calendar</a>
+        </li>
+    </ul>
+
+    <main>
+        <section>
+            <h1>Add new entry</h1>
+            <form action="/entry" method="POST">
+                <label for="sample-field">Sample:</label>
+                <input type="text" name="sample" id="sample-field" />
+
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+
+        <section>
+            <h1>Recent posts</h1>
+            <article>
+                <div>
+                    <h2>A bit of chill day today</h2>
+                    <time datetime="24-10-2019">Oct 24</time>
+                </div>
+                <p>
+                    The whether today is very good, 
+                    but I want to do nothing, Its quite boring
+                </p>
+            </article>
+        </section>
+    </main>
+    
+    <footer></footer>
+</body>
+</html>
